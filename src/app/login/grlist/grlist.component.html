@@ -1,0 +1,58 @@
+<div class="container-fluid ui">
+    <div class="row">
+        <div class="col">
+            <div class="logout">
+                <button type="button" class="btn btn-outline-danger" (click)="OnClickLogout()">LogOut</button>
+            </div>
+            <div class="listUi">
+                <span class="header"><b>{{listname}}</b></span>
+                <button class="btn headbtn header" data-toggle="modal" data-target="#ModalForm"> + </button>
+            </div>
+            <table class="data">
+                <tr *ngFor="let item of items;let i=index">
+                    <td class="col">{{item.name}}</td>
+                    <td class="col">{{item.quantity}}</td>
+                    <td class="col">
+                        <button type="button" class="close cls" (click)="deleteItem(i)" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <!-- Modal pop up starts-->
+            <div id="ModalForm" class="modal fade modelui">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form [formGroup]="listData" (ngSubmit)="addItem(listData.value.name,listData.value.quantity)">
+                                <div class="m-5 dataUi">
+                                    <p>{{listname}}</p>
+                                    <div class="listItem">
+                                        <input type="text" class="rounded" formControlName="name" name="name"
+                                            placeholder="Item Name">
+                                    </div>
+                                    <div class="listItem">
+                                        <input type="text" class="rounded" formControlName="quantity" name="quantity"
+                                            placeholder="Item Quantity">
+                                    </div>
+                                    <div class="listItem">
+                                        <button type="submit" class="btn btn-block btnd">Add Item</button>
+                                    </div>
+                                    <div class="listItem">
+                                        <button type="submit" class="btn btn-block btnd mt-2" (click)="OnClickFinish()"
+                                            data-dismiss="modal" aria-label="Close">
+                                           Finish</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal pop up ends -->
+        </div>
+    </div>
+</div>
+
+            

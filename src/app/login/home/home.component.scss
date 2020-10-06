@@ -1,0 +1,53 @@
+.ui{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    min-height: 100%;
+    height: 100%;
+    min-width: 100%;
+    padding: 2em;
+    font-size: 20px;
+    overflow-y: scroll;
+}
+.data{
+    background-color: #ffffff;
+    display:block;
+    color: black;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.modelui{
+    margin-top: 5em;
+}
+a:hover{
+color: #ffffff;
+}
+.listrow{
+    display: flex;
+    flex: 2;
+}
+.listUi{
+    text-align: center;
+    flex: 1 1 auto;
+    color: #d1332e;
+    font-weight: 700;
+}
+.listItem{
+    margin-top: 1em;
+    border-radius: 10px;
+}
+.logout{
+    text-align: end;
+}
+.btnd{
+  background-color: #d1332e;
+  color: #ffffff;
+}
+.cls{
+    color: red;
+}
